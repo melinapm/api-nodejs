@@ -3,7 +3,7 @@ module.exports = mongoose => {
         {
           name: String,
           description: String,
-          stock: Integer
+          stock: Number
         },
         { timestamps: true }
     );
