@@ -2,8 +2,7 @@ module.exports = mongoose => {
     var schema = mongoose.Schema(
         {
           name: String,
-          description: String,
-          stock: Number
+          description: String
         },
         { timestamps: true }
     );

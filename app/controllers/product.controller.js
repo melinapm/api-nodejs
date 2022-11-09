@@ -4,16 +4,15 @@ const Product = db.products;
 // Create and Save a new Product
 exports.create = (req, res) => {
     // Validate request
-    if (!req.body.title) {
+    if (!req.body.name) {
         res.status(400).send({ message: "Content can not be empty!" });
         return;
     }
 
     // Create a Product
     const product = new Product({
-        title: req.body.title,
-        description: req.body.description,
-        published: req.body.published ? req.body.published : false
+        name: req.body.name,
+        description: req.body.description
     });
 
     // Save Product in the database
@@ -32,8 +31,8 @@ exports.create = (req, res) => {
 
 // Retrieve all Products from the database.
 exports.findAll = (req, res) => {
-    const title = req.query.title;
-    var condition = title ? { title: { $regex: new RegExp(title), $options: "i" } } : {};
+    const name = req.query.name;
+    var condition = name ? { name: { $regex: new RegExp(name), $options: "i" } } : {};
 
     Product.find(condition)
     .then(data => {
