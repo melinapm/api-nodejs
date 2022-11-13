@@ -137,7 +137,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/api/products Copy",
+			"name": "http://localhost:8080/api/productOrders",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -224,7 +224,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/api/orders Copy",
+			"name": "http://localhost:8080/api/orders/addItem",
 			"request": {
 				"method": "POST",
 				"header": [],
