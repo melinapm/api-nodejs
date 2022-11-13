@@ -2,8 +2,6 @@ module.exports = (mongoose) => {
   var schema = mongoose.Schema(
     {
       name: String,
-      description: String,
-      price: Number,
     },
     { timestamps: true }
   );
@@ -14,7 +12,7 @@ module.exports = (mongoose) => {
     return object;
   });
 
-  const Product = mongoose.model("product", schema);
+  const Client = mongoose.model("client", schema);
 
-  return Product;
+  return Client;
 };

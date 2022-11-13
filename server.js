@@ -4,7 +4,7 @@ const cors = require("cors");
 const app = express();
 
 var corsOptions = {
-  origin: "http://localhost:8081"
+  origin: "http://localhost:8081",
 };
 
 app.use(cors(corsOptions));
@@ -21,6 +21,9 @@ app.get("/", (req, res) => {
 });
 
 require("./app/routes/product.routes")(app);
+require("./app/routes/productOrder.routes")(app);
+require("./app/routes/order.routes")(app);
+require("./app/routes/client.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
@@ -32,12 +35,12 @@ const db = require("./app/models");
 db.mongoose
   .connect(db.url, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
   })
   .then(() => {
     console.log("Connected to the database!");
   })
-  .catch(err => {
+  .catch((err) => {
     console.log("Cannot connect to the database!", err);
     process.exit();
   });
