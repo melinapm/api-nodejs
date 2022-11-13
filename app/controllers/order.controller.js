@@ -1,5 +1,7 @@
 const db = require("../models");
 const Order = db.orders;
+const ProductOrder = db.productOrders;
+const Product = db.products;
 
 // Create and Save a new Order
 exports.create = (req, res) => {
@@ -43,6 +45,11 @@ exports.addItem = async (req, res) => {
 
   const order = await Order.findById(id);
   order.items.push(req.body.idProductOrder);
+  const productOrder = await ProductOrder.findById(req.body.idProductOrder);
+  const product = await Product.findById(productOrder.idProduct);
+  let price = product.price;
+  price = price * productOrder.quantity;
+  order.total += price;
   await order.save();
   res.send(order);
 };

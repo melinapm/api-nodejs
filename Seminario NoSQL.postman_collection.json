@@ -114,7 +114,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"name\",\r\n    \"description\":\"description\"\r\n}",
+					"raw": "{\r\n    \"name\": \"name11\",\r\n    \"description\":\"description11\",\r\n    \"price\": 20\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -143,7 +143,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"idProduct\": \"6371410ddedec2ac56b1b274\",\r\n    \"idOrder\":\"description\",\r\n    \"quantity\": 4\r\n}",
+					"raw": "{\r\n    \"idProduct\": \"63714fc594b0ac7cbdf8ec5a\",\r\n    \"idOrder\":\"637150171b8df9afcc1306d7\",\r\n    \"quantity\": 20\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -230,7 +230,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"idProductOrder\": \"637145e2e8aa2a8a011c0d05\",\r\n    \"id\": \"63714484e8aa2a8a011c0cfe\"\r\n}",
+					"raw": "{\r\n    \"idProductOrder\": \"637151d508625706a999f511\",\r\n    \"id\": \"63715372b76eb56098ed58f7\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
